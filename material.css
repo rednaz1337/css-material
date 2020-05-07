@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+    --color-warn: rgb(235, 64, 64);
+    --color-primary: #1565c0;
+    --color-primary-light: #5e92f3;
+    --color-primary-dark: #003c8f;
+    --color-swich-track: rgba(0, 0, 0, 0.15);
+    --color-switch-track-active: var(--color-primary-light);
+    --color-switch-handle: var(--color-primary-dark);
+    --color-switch-handle-active: var(--color-primary-dark);
+    --color-background-card: white;
+    --color-background: rgb(240, 240, 240);
+    --color-text: black;
+
+    --shadow-card: 0px 1px 1.2px rgba(0, 0, 0, 0.5);
+    --font-size: 12pt;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --color-background: rgb(20, 20, 20);
+        --color-background-card: rgb(30, 30, 30);
+        --color-text: rgb(231, 231, 231);
+        --shadow-card: 0px 1px 1.2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .card{
+        margin: auto;
+        width: 50%;
+    }
+}
+  
+body{
+    background-color: var(--color-background);
+    padding: 0;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--font-size);
+}
+
+header{
+    background-color: var(--color-primary);
+    font-size: var(--font-size);
+
+    margin: 0px;
+    padding: 1.3em;
+    padding-left: 2em;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+}
+header h1{
+    margin: 0px;
+    margin-left: 1.5em;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: var(--font-size);
+}
+
+.logo{
+    background-color: white;
+    -webkit-mask: url('graphic_eq-24px.svg'); /*Prefix needed for Chrome*/
+    mask: url('graphic_eq-24px.svg');
+    height: 1.5em;
+    width: 1.5em;
+    display: block;
+}
+
+main, nav{
+    padding: 1.2rem;
+}
+
+button{
+    font-weight: 700;
+    font-size: var(--font-size);
+    color: white;
+    padding-bottom: 0.6em;
+    padding-top: 0.6em;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 0.25em;
+    border: none;
+    background-color: var(--color-primary);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s;
+
+    position: relative;
+
+    margin: 5px;
+}
+
+button:hover{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.1);
+}
+
+button:hover:active{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    filter: brightness(0.9);
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"] + label{
+    position: relative;
+    display: block;
+    margin-left: 45px;
+}
+
+input[type="checkbox"] + label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--color-swich-track);
+    border-radius: 7.5px;
+    width: 35px;
+    top: 3px;
+    left: -39px;
+    height: 14px;
+    transition: all 0.25s;
+}
+
+input[type="checkbox"]:checked + label::before{
+    background-color: var(--color-switch-track-active);
+}
+
+input[type="checkbox"] + label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--color-switch-handle);
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    top: 0px;
+    left: -41px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+    transition: all 0.25s;
+}
+
+input[type="checkbox"]:checked + label::after{
+    left: -22px;
+    background-color: var(--color-switch-handle-active);
+}
+
+.card{
+    background-color: var(--color-background-card);
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: var(--shadow-card);
+    color: var(--color-text);
+    margin-bottom: 1.2rem;
+}
+
+.card h1{
+    margin-top: 15px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card h1 span{
+    font-size: 0.875rem;
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+    color: rgba(100, 100, 100, 1);
+}

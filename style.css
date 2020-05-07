@@ -1,0 +1,3 @@
+input[id="dark-checkbox"] + label{
+    margin-left: auto;
+}
