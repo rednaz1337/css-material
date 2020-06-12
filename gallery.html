@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heinrichs Blog</title>
+    <link rel="stylesheet" href="material.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        .gallery{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-left: 1.2rem;
+        }
+
+        .gallery img{
+            max-width: 300px;
+        }
+    </style>
+    <header>
+        <div class="logo"></div>
+        <h1>
+            Heinrichs Blog
+        </h1>
+        <input type="checkbox" id="dark-checkbox">
+        <label for="dark-checkbox" data-handle-active="#FFFFFF">Dark Theme</label>
+    </header>
+    <main>
+        <h1>
+            Fotogalerie
+        </h1>
+        <div class="gallery">
+            <img src="https://picsum.photos/700/400" class="card">
+            <img src="https://picsum.photos/600/800" class="card">
+            <img src="https://picsum.photos/400/600" class="card">
+            <img src="https://picsum.photos/900/1200" class="card">
+            <img src="https://picsum.photos/100/150" class="card">
+            <img src="https://picsum.photos/500/400" class="card">
+            <img src="https://picsum.photos/200/350" class="card">
+            <img src="https://picsum.photos/700/300" class="card">
+            <img src="https://picsum.photos/800/240" class="card">
+        </div>
+    </main>
+    <nav>
+        <a href="index.html">Artikel</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="index.html">Quellcode</a>
+    </nav>
+    <footer>
+        
+    </footer>
+    <script src="material.js"></script>
+</body>
+
+</html>
